@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Optimizer</h1>
+        <form method="POST">
+            <label>Enter numbers (comma separated):</label>
+            <input type="text" name="numbers" placeholder="e.g. 1,2,3,4" required>
+            <button type="submit">Optimize</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                <h2>Results</h2>
+                <pre>{{ result }}</pre>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
